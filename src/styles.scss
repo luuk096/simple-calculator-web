@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+    width: 100%;
+    padding: 10px;
+}
+
+.container--medium {
+    max-width: 500px;
+}
+
+.form-field {
+    padding-right: 10px;
+}
+
+.form-field--smallest {
+    width: 60px;
+}
+
+.form-field--small {
+    width: 100px;
+}
