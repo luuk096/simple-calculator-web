@@ -30,9 +30,15 @@ export class SimpleCalculatorComponent implements OnInit {
       operator: this.operator,
       rightOperand: this.rightOperand,
     }
+    if (calculation.operator === OperatorModel.Divide && calculation.rightOperand === 0) {
+      this.errorMessage = 'Division by zero is undefined';
+      return;
+    } else {
+      this.errorMessage = '';
+    }
     this.calculationService.calculate(calculation).subscribe(calculationResult => {
       this.calculationService.sendResult(calculationResult);
-    }, (err: HttpErrorResponse) => {
+    }, (err) => {
       this.errorMessage = err.message;
     });
   }
