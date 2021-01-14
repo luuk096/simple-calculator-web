@@ -1,0 +1,33 @@
+<div>
+    <h2>Results</h2>
+    <table mat-table [dataSource]="dataSource">
+
+        <!-- LeftOperand Column -->
+        <ng-container matColumnDef="leftOperand">
+        <th mat-header-cell *matHeaderCellDef> Left operand </th>
+        <td mat-cell *matCellDef="let element"> {{element.leftOperand}} </td>
+        </ng-container>
+
+        <!-- Operator Column -->
+        <ng-container matColumnDef="operator">
+        <th mat-header-cell *matHeaderCellDef> Operator </th>
+        <td mat-cell *matCellDef="let element"> {{element.operator}} </td>
+        </ng-container>
+
+        <!-- RightOperand Column -->
+        <ng-container matColumnDef="rightOperand">
+        <th mat-header-cell *matHeaderCellDef> Right operand </th>
+        <td mat-cell *matCellDef="let element"> {{element.rightOperand}} </td>
+        </ng-container>
+
+        <!-- Result Column -->
+        <ng-container matColumnDef="result">
+        <th mat-header-cell *matHeaderCellDef> Result </th>
+        <td mat-cell *matCellDef="let element"> {{element.result}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+</div>

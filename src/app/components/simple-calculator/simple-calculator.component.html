@@ -1,0 +1,29 @@
+<div class="container container--medium">
+  <div>
+    <h1>Simple calculator</h1>
+
+    <mat-form-field appearance="standard" class="form-field form-field--small">
+      <input type="number" [(ngModel)]="leftOperand" matInput autocomplete="off">
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill" class="form-field form-field--smallest">
+      <mat-select [(ngModel)]="operator">
+        <mat-option [value]="0">+</mat-option>
+        <mat-option [value]="1">-</mat-option>
+        <mat-option [value]="2">*</mat-option>
+        <mat-option [value]="3">/</mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field appearance="standard" class="form-field form-field--small">
+      <input type="number" [(ngModel)]="rightOperand" matInput autocomplete="off">
+    </mat-form-field>
+  
+    <button type="submit" mat-raised-button (click)="calculate()">Calculate</button>
+  </div>
+
+  <span>{{errorMessage}}</span>
+
+  <app-results></app-results>
+  
+</div>
