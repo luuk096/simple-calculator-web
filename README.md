@@ -1,3 +1,6 @@
+Note: Dit project bevat (nog) geen unit tests, hier was geen tijd meer voor tijdens de ontwikkeling van de simple calculator.
+
+
 # SimpleCalculatorWeb
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
