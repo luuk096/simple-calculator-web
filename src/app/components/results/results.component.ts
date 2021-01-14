@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import CalculationResultModel from 'src/app/shared/models/calculation-result.model';
 import { CalculationService } from 'src/app/shared/services/calculation.service';
@@ -13,7 +13,7 @@ export class ResultsComponent implements OnInit {
   displayedColumns: string[] = ['leftOperand', 'operator', 'rightOperand', 'result'];
   dataSource: MatTableDataSource<CalculationResultModel>;
 
-  constructor(private calculatorService: CalculationService, private changeDetectorRefs: ChangeDetectorRef) { 
+  constructor(private calculatorService: CalculationService) { 
     this.dataSource = new MatTableDataSource<CalculationResultModel>();
   }
 
